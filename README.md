@@ -3,7 +3,7 @@ This frees user form typing all firebase cloud codes into index.js. Now you can 
 
 # How to get started
 
-1. Clone this repository to your root directory of firebase functions (ie. the directory containing 'firebase.json' file).<br /> <pre> git clone 'https://github.com/UnresolvedCold/firebase-merge.git'</pre>
+1. Clone this repository to your root directory of firebase functions (ie. the directory containing 'firebase.json' file).<br /> <pre> git clone https://github.com/UnresolvedCold/firebase-merge.git</pre>
 1. Change the directory to 'firebase-merge' <br /><pre>cd firebase-merge</pre>
 1. Install the required node modules<br /> <pre>npm install</pre>
 1. Go back to the root directory and create a new directory named, 'js'<br/> <pre>cd ..<br />mkdir js</pre>
