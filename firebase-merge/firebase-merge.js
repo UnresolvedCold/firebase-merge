@@ -1,7 +1,7 @@
 var fs = require('fs');
 
-var index = '../index.js'; //this is the entry point for firebase
-var indexBackup = '../index.bak';
+var index = '../functions/index.js'; //this is the entry point for firebase
+var indexBackup = '../functions/index.js.bak';
 var fileList = './CodeFiles.dat'; //this contains the address of list of files to be combined
 
 fs.stat(indexBackup, function (err, stats) {
@@ -42,6 +42,8 @@ async function ProcessCodeFiles()
             //open individual files
             for(var i=0;i<array.length;i++) {
 
+                if(array[i].trim().length == 0) break;
+
                 var filename = array[i].trim();
                 console.log('processing '+filename);
                 fs.readFile(filename, function read(err, _data) {
@@ -50,7 +52,7 @@ async function ProcessCodeFiles()
                     }
                     
                     //create index.js
-                    fs.appendFile(index, _data+'\n\n', function (err) {
+                    fs.appendFile(index, _data+'\n', function (err) {
                         if (err) throw err;
 
                     });
