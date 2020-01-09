@@ -1,0 +1,11 @@
+../../js/init.js
+../../js/Partner/addPartner.js
+../../js/Partner/cron.js
+../../js/Partner/AllowBlockAccount.js
+../../js/Partner/Editor.js
+../../js/Partner/getGymInfo.js
+../../js/Partner/getMisc.js
+../../js/Partner/Message.js
+../../js/Partner/Notifications.js
+../../js/Partner/setGymStage.js
+../../js/Partner/validateUsername.js

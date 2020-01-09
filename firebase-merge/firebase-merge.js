@@ -3,14 +3,16 @@ var fs = require('fs');
 var index = '../../functions/index.js'; //this is the entry point for firebase
 var indexBackup = '../../functions/index.js.bak';
 var fileList = './CodeFiles.dat'; //this contains the address of list of files to be combined
+var init = './init.dat' //all initializers go here
 
+//initialize and create backup
 fs.stat(indexBackup, function (err, stats) {
     //console.log(stats);//here we got all information of file in stats variable
     
     if (err) {
         if(err.code=='ENOENT')
         {
-            ProcessCodeFiles();
+            ProcessCodeFiles(init);
             return;
         }
 
@@ -21,12 +23,23 @@ fs.stat(indexBackup, function (err, stats) {
     fs.unlink(indexBackup,function(err){
             if(err) return console.log(err);
     
-            ProcessCodeFiles();
+            ProcessCodeFiles(init);
 
     });  
 });
 
-async function ProcessCodeFiles()
+fs.stat(index, function (err, stats) {
+    //console.log(stats);//here we got all information of file in stats variable
+    
+    if (err) {
+        return console.error(err);
+    }
+
+    ProcessCodeFiles(fileList);
+     
+});
+
+async function ProcessCodeFiles(fileList)
 {
     //read the file list
     fs.rename(index, indexBackup, function (err) {
