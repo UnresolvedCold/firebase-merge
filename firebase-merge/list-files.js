@@ -2,6 +2,7 @@ var fs = require('fs');
 var glob = require("glob")
 
 var fileList = './CodeFiles.dat';
+var js = '../../js'
 
 fs.stat(fileList, function (err, stats) {
     //console.log(stats);//here we got all information of file in stats variable
@@ -29,11 +30,11 @@ async function CreateList()
 {
 
     //get all files name in js
-    glob("**/*.js", { cwd: "../js" }, function (er, files) {
+    glob("**/*.js", { cwd: js }, function (er, files) {
     // files is an array of filenames.
     for(var i=0;i<files.length;i++)
     {
-        fs.appendFile(fileList, '../js/'+files[i]+'\n', function (err) {
+        fs.appendFile(fileList, '../../js/'+files[i]+'\n', function (err) {
             if (err) throw err;
 
         });

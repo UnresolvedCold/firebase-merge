@@ -1,7 +1,7 @@
 var fs = require('fs');
 
-var index = '../functions/index.js'; //this is the entry point for firebase
-var indexBackup = '../functions/index.js.bak';
+var index = '../../functions/index.js'; //this is the entry point for firebase
+var indexBackup = '../../functions/index.js.bak';
 var fileList = './CodeFiles.dat'; //this contains the address of list of files to be combined
 
 fs.stat(indexBackup, function (err, stats) {
