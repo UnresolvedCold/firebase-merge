@@ -19,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/UnresolvedCold/firebase-merge/issues"
   },
-  "homepage": "https://github.com/UnresolvedCold/firebase-merge#readme"
+  "homepage": "https://github.com/UnresolvedCold/firebase-merge#readme",
+  "bin": {
+    "fb-list": "./firebase-merge/list-files.js",
+    "fb-merge": "./firebase-merge/firebase-merge.js"
+  }
 }
