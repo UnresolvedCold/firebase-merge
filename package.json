@@ -21,7 +21,6 @@
   },
   "homepage": "https://github.com/UnresolvedCold/firebase-merge#readme",
   "bin": {
-    "fb-list": "./firebase-merge/list-files.js",
-    "fb-merge": "./firebase-merge/firebase-merge.js"
+    "fb": "./firebase-merge/main.js"
   }
 }

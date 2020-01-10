@@ -18,7 +18,9 @@ In case of header files (ie. the files you want to write at the top of index.js)
     >cd firebase-merge
 1. Install required node modules
     >npm install
-1. Write your code iside js file in the root directory.
+1. Perform necessary operations like updating the gitignore to ignore the firebase-merge files and create a folder called js in root directory
+    >install.bat
+1. Write your code inside js file in the root directory.
 1. run 'perform-merge-operation.bat' located in './firebase-merge/firebase/merge/' directory to update the index.js file.
 1. Verify the content of index.js before uploading. 
     >Note: A backup file called, 'index.js.bak' is created before the execution of the script. If anything bad happens, 'you can delete the .bak extension of the backup file to get your original file'
@@ -28,5 +30,3 @@ In case of header files (ie. the files you want to write at the top of index.js)
 ## What's next
 
 1. Implementing a node command line to remove the unnecessary requirement of changing folders everytimne you merge.
-
-1. Implementing an installer.
